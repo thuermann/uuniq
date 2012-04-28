@@ -1,0 +1,2 @@
+This tool uuniq(1) is similar to the standard uniq(1) in Unix,
+but does not require the input lines to be sorted.

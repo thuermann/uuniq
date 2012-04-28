@@ -1,0 +1,24 @@
+.\"
+.\" $Id: uuniq.1,v 1.1 2012/04/28 05:21:13 urs Exp $
+.\"
+.TH UUNIQ 1 "Apr 28, 2012" "" "User Commands"
+.SH NAME
+uuniq \- remove duplicate lines from input
+.SH SYNOPSIS
+.B uuniq
+.RI [ file " ...]"
+.SH DESCRIPTION
+.B uuniq
+reads lines from input and copies them to standard output with duplicate
+lines removed.  For each set of identical lines only the first occurence
+is written to output.  This is similar to
+.BR uniq (1),
+but in contrast,
+.B uuniq
+does not require the input lines to be sorted.
+.SH OPTIONS
+None
+.SH "SEE ALSO"
+.BR uniq (1)
+.SH AUTHOR
+Urs Thuermann <urs@isnogud.escape.de>

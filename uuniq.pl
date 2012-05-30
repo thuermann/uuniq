@@ -1,14 +1,14 @@
-#!/usr/bin/awk -f
+#!/usr/bin/perl
 #
-# $Id: uuniq.awk,v 1.1 2008/07/29 08:47:52 urs Exp $
+# $Id: uuniq.pl,v 1.1 2012/05/30 10:42:46 urs Exp $
 #
 # Copy input lines to output removing duplicate lines.  In contrast to
 # the standard uniq(1) utility, duplicate lines do not need to be
 # adjacent to be removed.
 
-{
-    if (!seen[$0]) {
-	seen[$0] = 1
-	print
+while (<>) {
+    if (!$seen{$_}) {
+	$seen{$_} = 1;
+	print;
     }
 }

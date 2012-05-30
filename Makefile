@@ -1,5 +1,5 @@
 #
-# $Id: Makefile,v 1.2 2012/04/28 05:21:13 urs Exp $
+# $Id: Makefile,v 1.3 2012/05/30 10:42:46 urs Exp $
 #
 
 RM = rm -f
@@ -13,7 +13,7 @@ all: $(programs)
 clean:
 	$(RM) $(programs) *.o core
 
-.SUFFIXES: .awk
-.awk:
+.SUFFIXES: .pl
+.pl:
 	cp $< $@
 	chmod +x $@

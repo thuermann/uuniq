@@ -1,11 +1,12 @@
 .\"
-.\" $Id: uuniq.1,v 1.1 2012/04/28 05:21:13 urs Exp $
+.\" $Id: uuniq.1,v 1.2 2012/05/30 10:43:00 urs Exp $
 .\"
 .TH UUNIQ 1 "Apr 28, 2012" "" "User Commands"
 .SH NAME
 uuniq \- remove duplicate lines from input
 .SH SYNOPSIS
 .B uuniq
+.RB [ \-i ]
 .RI [ file " ...]"
 .SH DESCRIPTION
 .B uuniq
@@ -17,7 +18,9 @@ but in contrast,
 .B uuniq
 does not require the input lines to be sorted.
 .SH OPTIONS
-None
+.TP
+.B \-i
+Ignore case when comparing lines.
 .SH "SEE ALSO"
 .BR uniq (1)
 .SH AUTHOR

@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# $Id: uuniq.pl,v 1.2 2012/05/30 10:43:00 urs Exp $
+# $Id: uuniq.pl,v 1.3 2012/09/16 05:09:51 urs Exp $
 #
 # Copy input lines to output removing duplicate lines.  In contrast to
 # the standard uniq(1) utility, duplicate lines do not need to be
@@ -13,11 +13,7 @@ if (!getopts("i")) {
 }
 
 while (<>) {
-    if (defined($opt_i)) {
-	($key = $_) =~ tr [A-Z] [a-z];
-    } else {
-	$key = $_;
-    }
+    $key = defined($opt_i) ? $key = lc($_) : $key = $_;
     if (!$seen{$key}) {
 	$seen{$key} = 1;
 	print;
